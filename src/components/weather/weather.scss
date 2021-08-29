@@ -1,0 +1,146 @@
+.card-container{
+$self: &;
+    .card-container {
+        width: 100%;
+        display: flex;
+
+        #{ $self }__col-2 {
+            width: 50%;
+            flex: 50%;
+         }
+            
+    }
+
+    &__col-3 {
+         flex: 33.333%;
+        
+         &__icon {
+            text-align: center;
+            flex: 33.333%;
+        }
+    }
+
+    svg {
+        fill: #FFC700;
+        width: 328px;
+        max-width: 90%;
+    }
+
+    .icon {
+        text-align: center;
+    }
+
+   .sml-text {
+        color: #A8AABD;
+        font-size: 1em;
+        padding:0 0 40px 0;
+        text-transform: capitalize;
+    }
+
+    .medium-text {
+         font-size: 2.01em;
+         font-weight: bold;
+         padding: 10px 0 20px 0;
+     }
+
+     .big-text {
+          font-size: 5.15em;
+          font-weight: bold;
+          text-align: center;
+          display: block;
+          text-indent: -20%;
+      }
+}
+
+.card-root{
+    box-sizing: border-box;
+    display: flex;
+    width: 100%;
+    padding: 5% 0; 
+}
+
+/* On screens that are 1680px or less, set the background color to blue */
+@media screen and (max-width: 1680px) {
+    .card-container {
+        svg {
+            width: 280px;
+        }
+
+        .sml-text {
+            font-size: 0.8em;
+        }
+
+        .medium-text {
+            font-size: 1.6em;
+        }
+
+        .big-text {
+            font-size: 4em;
+        }
+    }
+}
+
+/* On screens that are 1340px or less, set the background color to blue */
+@media screen and (max-width: 1340px) {
+    .card-container {
+        svg {
+            width: 240px;
+        }
+
+        .sml-text {
+            font-size: 0.6em;
+        }
+
+        .medium-text {
+            font-size: 1.3em;
+        }
+
+        .big-text {
+            font-size: 3.5em;
+        }
+    }
+}
+
+
+/* On screens that are 1080px or less, set the background color to blue */
+@media screen and (max-width: 1080px) {
+    .card-container {
+        svg {
+            width: 120px;
+        }
+
+        .sml-text {
+            font-size: 0.4em;
+        }
+
+        .medium-text {
+            font-size: 0.7em;
+        }
+
+        .big-text {
+            font-size: 2em;
+        }
+    }
+}
+
+/* On screens that are 580px or less, set the background color to blue */
+@media screen and (max-width: 580px) {
+    .card-container {
+        svg {
+            width: 100px;
+        }
+
+        .sml-text {
+            font-size: 0.3em;
+        }
+
+        .medium-text {
+            font-size: 0.5em;
+        }
+
+        .big-text {
+            font-size: 1.2em;
+        }
+    }
+
+}
