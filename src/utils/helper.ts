@@ -1,11 +1,13 @@
+import { IApiList } from "../interface/api.interface";
 /**
  *(Function) that returns Max Temperature
  *(Param) url
  */
-export const getMaxTemp = (data: []) =>
-  Math.max.apply(
-    Math,
-    data.map((x: any) => {
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
+export const getMaxTemp = (data: any) =>
+  Math.max(
+    ...data.map((x: IApiList) => {
       return x.main.temp;
     })
   );
@@ -14,10 +16,11 @@ export const getMaxTemp = (data: []) =>
  *(Function) that returns Min Temperature
  *(Param) url
  */
-export const getMinTemp = (data: []) =>
-  Math.min.apply(
-    Math,
-    data.map((x: any) => {
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
+export const getMinTemp = (data: any) =>
+  Math.min(
+    ...data.map((x: IApiList) => {
       return x.main.temp;
     })
   );

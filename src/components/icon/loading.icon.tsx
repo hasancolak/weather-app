@@ -1,7 +1,8 @@
+import React from "react";
 /**
  *(Function) Returns the loading HTML
  */
-const Loading = () => {
+const Loading = (): JSX.Element => {
   return (
     <div className="m-16">
       <div

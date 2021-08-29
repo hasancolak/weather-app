@@ -6,7 +6,7 @@ import Forecast from "../forecast/forecast";
 /**
  *(Function) that returns the forecast card list to scroll with mouse wheel
  */
-const ScrollBox = () => {
+const ScrollBox = (): JSX.Element => {
   const scrollWrapperRef = useRef() as React.MutableRefObject<HTMLInputElement>;
   const { listenScrollEvent } = useScroll(scrollWrapperRef);
 

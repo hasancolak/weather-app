@@ -1,4 +1,5 @@
 import "./weather.scss";
+import React from "react";
 import { useWeather } from "../../hooks/useWeather";
 import IWeather from "../../interface/weather.interface";
 import WeatherIcon from "../icon/weather.icon";
@@ -6,7 +7,7 @@ import WeatherIcon from "../icon/weather.icon";
 /**
  *(Function) that returns the weather card by selecting from weather forecast list
  */
-const Weather = () => {
+const Weather = (): JSX.Element => {
   const weather = useWeather()[0] as IWeather;
 
   return (
@@ -19,7 +20,7 @@ const Weather = () => {
         <div className="card-container__col-3">
           <div className="card-container">
             <div className="card-container__col-2 sml-text">
-              {weather!.description}
+              {weather.description}
             </div>
             <div className="card-container__col-2 sml-text">
               {weather.max_temp}&deg; / {weather.min_temp}&deg;

@@ -3,7 +3,7 @@ import { ERROR } from "./constants";
  *(Function) that returns response json
  *(Param) url
  */
-export default async function Fetcher(url: any) {
+export default async function Fetcher(url: string): Promise<string> {
   const res = await fetch(url);
 
   if (!res.ok) {
@@ -18,7 +18,7 @@ export default async function Fetcher(url: any) {
  *(Function) that returns error
  *(Param) errorCode
  */
-const handleError = (errorCode: any) => {
+const handleError = (errorCode: number) => {
   let error;
   switch (errorCode) {
     case 401:

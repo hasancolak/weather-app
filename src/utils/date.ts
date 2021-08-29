@@ -2,7 +2,7 @@
  *(Function) that returns the Day
  *(Param) datetime
  */
-export const getDay = (num: number) => {
+export const getDay = (num: number): string => {
   return new Date(num * 1000 - 10800).toLocaleString("en-us", {
     weekday: "long",
   });
@@ -12,7 +12,7 @@ export const getDay = (num: number) => {
  *(Function) that returns the Date
  *(Param) datetime
  */
-export const getDate = (num: number) => {
+export const getDate = (num: number): string => {
   const dt = new Date(num * 1000);
 
   return (
@@ -28,7 +28,7 @@ export const getDate = (num: number) => {
  *(Function) that returns the hour
  *(Param) datetime
  */
-export const getHour = (num: number) => {
+export const getHour = (num: number): string => {
   const dt = new Date(num * 1000);
   const mn = dt.getUTCMinutes();
   const hr = dt.getUTCHours();

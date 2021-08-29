@@ -1,4 +1,5 @@
 import "./forecast.scss";
+import React from "react";
 import { useWeather } from "../../hooks/useWeather";
 import { useForecast } from "../../hooks/useForecast";
 import IWeather from "../../interface/weather.interface";
@@ -8,7 +9,7 @@ import Loading from "../icon/loading.icon";
 /*
  * (Component) Forecast is a component that renders the forecast card
  */
-const Forecast = () => {
+const Forecast = (): JSX.Element => {
   const [, updateWeather] = useWeather();
   const { forecast, isLoading, isError, updateForecast } = useForecast();
   const setWeather = (item: IWeather) => {
@@ -30,7 +31,7 @@ const Forecast = () => {
 
   return (
     <>
-      {forecast.map(function (item: any, index: any) {
+      {forecast.map(function (item: IWeather, index: number) {
         return (
           <div
             className="scroll__item"
