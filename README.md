@@ -98,7 +98,7 @@ Advantage of using SWR library:
 
 ## Testing
 
-TDD is one of the best practice of software development technique. In this project, I have just developed some basic test show integration.
+TDD is one of the best practice of software development technique. In this project, I have just developed some basic tests integration.
 
 On the other hand adding integration and e2e testing are also required practice of software development technique.
 
